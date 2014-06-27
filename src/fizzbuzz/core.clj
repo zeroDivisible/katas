@@ -1,16 +1,16 @@
 (ns fizzbuzz.core
   (:gen-class))
 
-(defn generate-numbers [limit]
-  (range 1 limit))
+(defn by3 [number]
+  (= 0 (mod number 3)))
 
-
-(defn fizz [col]
-  (map #(if (and (integer? %) (= 0 (mod % 3))) "Fizz" %) col))
-
-(defn buzz [col]
-  (map #(if (and (integer? %) (= 0 (mod % 5))) "Buzz" %) col))
+(defn by5 [number]
+  (= 0 (mod number 5)))
 
 (defn fizzbuzz [col]
-  (buzz (fizz col)))
+  (map #(if (and (by5 %) (by3 %)) "FizzBuzz" 
+            (if (by5 %) "Buzz" 
+            (if (by3 %) "Fizz" %)))
+       col))
+
 

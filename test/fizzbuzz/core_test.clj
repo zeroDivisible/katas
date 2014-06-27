@@ -3,21 +3,28 @@
             [fizzbuzz.core :refer :all]))
 
 
-(deftest generate-numbers-function
-  (testing "should return numbers from 1 to 100"
-    (is (= (generate-numbers 101) (range 1 101))))
+(deftest by3-test
+  (testing "should return true for 3 being divisible by 3"
+    (is (= (by3 3) true)))
 
-  (testing "should replace numbers divisible by 3 with Fizz"
-    (is (= (fizz (generate-numbers 11))
-           (list 1 2 "Fizz" 4 5 "Fizz" 7 8 "Fizz" 10))))
+  (testing "should return false for 2 being divisible by 3"
+    (is (= (by3 2) false))))
 
-  (testing "should replace numbers divisible by 5 with Buzz"
-    (is (= (buzz (generate-numbers 11))
-           (list 1 2 3 4 "Buzz" 6 7 8 9 "Buzz"))))
 
+(deftest by5-test
+  (testing "should return true for 5 being divisible by 5"
+    (is (= (by5 5) true)))
+
+  (testing "should return false for 6 being divisible by 5"
+    (is (= (by5 6) false))))
+
+
+(deftest fizzbuzz-test
   (testing "should replace numbers divisible by 3 with Fizz and by 5 with Buzz"
-    (is (= (fizzbuzz (generate-numbers 11))
+    (is (= (fizzbuzz (range 1 11))
            (list 1 2 "Fizz" 4 "Buzz" "Fizz" 7 8 "Fizz" "Buzz"))))
-  )
 
+  (testing "should replace numbers divisible by 3 with Fizz and by 5 with Buzz, by 15 with FizzBuzz"
+    (is (= (fizzbuzz (range 1 16))
+           (list 1 2 "Fizz" 4 "Buzz" "Fizz" 7 8 "Fizz" "Buzz" 11 "Fizz" 13 14 "FizzBuzz")))))
 
