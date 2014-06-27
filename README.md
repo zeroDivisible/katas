@@ -1,6 +1,6 @@
 # fizzbuzz
 
-My very first attempt to write clojure code - TDD cata for for FizzBuzz
+My very first attempt to write clojure code - TDD kata for for FizzBuzz
 
 ## Usage
 
