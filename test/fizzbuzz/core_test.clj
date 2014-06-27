@@ -5,18 +5,18 @@
 
 (deftest by3-test
   (testing "should return true for 3 being divisible by 3"
-    (is (= (by3 3) true)))
+    (is (= (by 3 3) true)))
 
   (testing "should return false for 2 being divisible by 3"
-    (is (= (by3 2) false))))
+    (is (= (by 3 2) false))))
 
 
 (deftest by5-test
   (testing "should return true for 5 being divisible by 5"
-    (is (= (by5 5) true)))
+    (is (= (by 5 5) true)))
 
   (testing "should return false for 6 being divisible by 5"
-    (is (= (by5 6) false))))
+    (is (= (by 5 6) false))))
 
 
 (deftest fizzbuzz-test

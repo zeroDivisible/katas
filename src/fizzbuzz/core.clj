@@ -1,16 +1,13 @@
 (ns fizzbuzz.core
   (:gen-class))
 
-(defn by3 [number]
-  (= 0 (mod number 3)))
-
-(defn by5 [number]
-  (= 0 (mod number 5)))
+(defn by [numb arg]
+  (= 0 (mod numb arg)))
 
 (defn fizzbuzz [col]
-  (map #(if (and (by5 %) (by3 %)) "FizzBuzz" 
-            (if (by5 %) "Buzz" 
-            (if (by3 %) "Fizz" %)))
+  (map #(if (by % 15) "FizzBuzz"
+            (if (by % 5) "Buzz"
+            (if (by % 3) "Fizz" %)))
        col))
 
 
