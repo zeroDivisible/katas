@@ -5,6 +5,6 @@
 
 (deftest generate-numbers-function
   (testing "should return numbers from 1 to 100"
-    (is (map = generate-numbers (range 1 101)))))
+    (is (= (generate-numbers 101) (range 1 101)))))
 
 
