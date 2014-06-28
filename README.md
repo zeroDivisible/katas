@@ -1,18 +1,7 @@
-# fizzbuzz
+### katas
 
-My very first attempt to write clojure code - TDD kata for for FizzBuzz
+Repository contains small code katas or minor projects written in misc lanaguages. Most of the time those had been written just as a proof of concept, refreshement of knowledge about a language or just as a way to try out new language.
 
 ## Usage
 
-Run the following command to execute all the tests
-
-```
-    $ lein test
-```
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Should be further explained in directories in specific katas
