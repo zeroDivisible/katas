@@ -2,7 +2,6 @@
   (:require [clojure.test :refer :all]
             [fizzbuzz.core :refer :all]))
 
-
 (deftest by3-test
   (testing "should return true for 3 being divisible by 3"
     (is (= (by? 3 3) true)))
